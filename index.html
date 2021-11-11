@@ -15,78 +15,26 @@
     <div class="container py-5">
         <div class="row g-0">
           <div class="col">
-              <div class="mf-hidden active">
-                  <img class="mf-item mf-left" :src="images[counter]" alt="">
-                  <div class="position-relative text-white">
-                      <div class="mf-left-text">
-                          <h3>Svezia</h3>
-                          <h6>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.</h6>
-                      </div>
-                  </div>
-              </div>
-    
-              <div class="mf-hidden">
-                  <img class="mf-item mf-left" :src="images[counter]" alt="">
-                  <div class="position-relative text-white">
-                      <div class="mf-left-text">
-                          <h3>Svizzera</h3>
-                          <h6>Lorem ipsum.</h6>
-                      </div>
-                  </div>
-              </div>
-    
-              <div class="mf-hidden">
-                  <img class="mf-item mf-left" :src="images[counter]" alt="">
-                  <div class="position-relative text-white">
-                      <div class="mf-left-text">
-                          <h3>Gran Bretagna</h3>
-                          <h6>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h6>
-                      </div>
-                  </div>
-              </div>
-    
-              <div class="mf-hidden">
-                  <img class="mf-item mf-left" :src="images[counter]" alt="">
-                  <div class="position-relative text-white">
-                      <div class="mf-left-text">
-                          <h3>Germania</h3>
-                          <h6>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,</h6>
-                      </div>
-                  </div>
-              </div>
-    
-              <div class="mf-hidden">
-                  <img class="mf-item mf-left" :src="images[counter]" alt="">
-                  <div class="position-relative text-white">
-                      <div class="mf-left-text">
-                          <h3>Paradise</h3>
-                          <h6>Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,</h6>
-                      </div>
-                  </div>
-              </div>
-                
+            <div class="mf-hidden active">
+                <img class="mf-item mf-left" :src="images[counter]" alt="">
+                <div class="position-relative text-white">
+                    <div class="mf-left-text">
+                        <h3>{{title[counter]}}</h3>
+                        <h6>{{text[counter]}}</h6>
+                    </div>
+                </div>
+            </div>       
           </div>
+
           <div class="col-2 position-relative">
-              <div>
-                  <img class="mf-item mf-right active2" :src="images[counter]" alt="">
-              </div>
-              <div>
-                  <img class="mf-item mf-right" :src="images[counter]" alt="">
-              </div>
-              <div>
-                  <img class="mf-item mf-right" :src="images[counter]" alt="">
-              </div>
-              <div>
-                  <img class="mf-item mf-right" :src="images[counter]" alt="">
-              </div>
-              <div>
-                  <img class="mf-item mf-right" :src="images[counter]" alt="">
-              </div>
-              <div @click="upSlide" class="mf-up"><i class="fas fa-chevron-up"></i></div>
-              <div @click="downSlide" class="mf-down"><i class="fas fa-chevron-down"></i></div>
+            <div v-for="image in images">
+                <img :class="{active2: (image === images[counter])}" class="mf-item mf-right" :src="image" alt="">
+            </div>
+            <div @click="downSlide" class="mf-up"><i class="fas fa-chevron-up"></i></div>
+            <div @click="upSlide" class="mf-down"><i class="fas fa-chevron-down"></i></div>
           </div>
         </div>
-      </div>
+    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
