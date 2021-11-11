@@ -1,0 +1,63 @@
+.mf-item{
+  width: 100%;
+  object-fit: cover;
+}
+
+.mf-left{
+  height: 500px;
+}
+
+.mf-hidden{
+  display: none;
+}
+
+.mf-hidden.active{
+  display: block;
+}
+
+.mf-left-text{
+  position: absolute;
+  right: 20px;
+  bottom: 50px;
+  text-align: right;
+}
+
+.mf-right{
+  height: 100px;
+  filter: brightness(50%);
+}
+
+.mf-right.active2{
+  border: 3px solid white;
+  filter: brightness(100%);
+}
+
+.mf-up, .mf-down{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  vertical-align: middle;
+  text-align: center;
+  filter: brightness(50%);
+  cursor: pointer;
+}
+
+.mf-up{
+  top: 10px;
+}
+
+.mf-down{
+  bottom: 10px;
+}
+
+.mf-up:hover, .mf-down:hover{
+  filter: brightness(100%);
+}
+
+
+
